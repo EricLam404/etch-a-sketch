@@ -7,17 +7,34 @@ for(let col = 0; col < 16; col++){
     for(let row = 0; row < 16; row++){
         let square = document.createElement('div');
         square.classList.add('square');
-        square.addEventListener("mouseover", changeColor);
         r.appendChild(square);
     }
     container.appendChild(r);
 }
 
-document.body.appendChild(container)
+document.body.appendChild(container);
+
+window.addEventListener('mousedown', addHover);
+
+window.addEventListener('mouseup', removeHover);
+
+function removeHover(e) {
+    let squares = document.querySelectorAll('.square');
+
+    squares.forEach(square => {
+        square.removeEventListener("mouseover", changeColor);
+    })
+}
+
+function addHover(e) {
+    let squares = document.querySelectorAll('.square');
+
+    squares.forEach(square => {
+        square.addEventListener("mouseover", changeColor, {once: true});
+    })
+}
 
 function changeColor(e) {
-    console.log(e);
-    console.log(this);
     this.style.backgroundColor = "black";   
 }
 
