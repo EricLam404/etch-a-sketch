@@ -4,3 +4,19 @@
     display: flex;
     justify-content: center;
 }
+
+.container{
+    height: 512px;
+    width: 512px;
+}
+
+.row{
+    display: flex;
+}
+.square {
+    border: 2px solid;
+    height: 32px;
+    width: 32px;
+    margin: 0px;
+    flex-shrink: 0;
+}
