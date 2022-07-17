@@ -1,6 +1,6 @@
 .bodys {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -12,36 +12,58 @@
     justify-content: center;
 }
 
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
 .container{
     height: 512px;
     width: 512px;
     border: 2px solid;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 32%;
+    margin: 50px;
+    padding: 0px;;
+
 }
 
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.output {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+
+}
 .buttons {
     display: flex;
-    justify-content: space-around;
-    margin: 10px;
-    margin-left: 30%;
-    margin-right: 30%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3px;
 }
 
 .button {
     background-color: seagreen;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 9px;
+    height: 25px;
+    width: 150px;
+    margin-bottom: 15px;
 }
 
 .row{
     display: flex;
+    margin: 0px;
+    padding: 0px;
 }
 .square {
-    height: 32px;
-    width: 32px;
     margin: 0px;
-    flex-shrink: 0;
+    padding: 0px;
 }
