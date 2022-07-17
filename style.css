@@ -1,3 +1,10 @@
+.bodys {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
     font-weight: bolder;
     font-size: 3em;
@@ -8,13 +15,31 @@
 .container{
     height: 512px;
     width: 512px;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 32%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.button {
+    background-color: seagreen;
+    border: 1px solid;
+    border-radius: 5px;
 }
 
 .row{
     display: flex;
 }
 .square {
-    border: 2px solid;
     height: 32px;
     width: 32px;
     margin: 0px;
