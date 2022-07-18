@@ -17,8 +17,14 @@ let blackButton = document.createElement('button');
 blackButton.classList.add('black', "button");
 blackButton.textContent = "Black Mode";
 
+let clearButton = document.createElement('button');
+
+clearButton.classList.add('clear', "button");
+clearButton.textContent = "Clear";
+
 buttons.appendChild(rainbowButton);
 buttons.appendChild(blackButton);
+buttons.appendChild(clearButton);
 
 left.appendChild(buttons);
 
@@ -59,6 +65,9 @@ rainbow.addEventListener('click', changeRainbow);
 
 let black = document.querySelector(".black");
 black.addEventListener('click', changeBlack);
+
+let clear = document.querySelector(".clear");
+clear.addEventListener('click', clearAll);
 
 function changeSize(squares){
     let size = 512 / squares;
@@ -117,11 +126,15 @@ function changeBlack(e) {
 }
 
 function changeColor(e) {
-    console.log(rainbowMode);
     if(rainbowMode){
         this.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
     } else
         this.style.backgroundColor = "black";  
+}
+
+function clearAll(e) {
+    var slider = document.querySelector(".slider");
+    changeSize(slider.value);
 }
 
 
