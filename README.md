@@ -4,4 +4,4 @@ Created etch-a-sketch using HTML, CSS and JavaScript
 Updated to use Next.js with typescript
 
 Live Link
-https://ericlam404.github.io/etch-a-sketch/
+https://etch-a-sketch-404.vercel.app/
