@@ -18,7 +18,7 @@ export default function Canvas() {
               {row.map((cell, colIndex) => (
                 <div
                   key={`${rowIndex}-${colIndex}`}
-                  className={`w-5 h-5 border border-black ${cell === 'X' ? 'bg-black' : 'bg-white'}`}
+                  className={`w-5 h-5 ${cell === 'X' ? 'bg-black' : 'bg-white'}`}
                   onClick={() => handleCellClick(rowIndex, colIndex)}
                 />
               ))}
